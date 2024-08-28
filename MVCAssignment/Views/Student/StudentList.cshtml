@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MVCAssignment.Models.Student>
+
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+<h1>StudentList</h1>
+
+@* @foreach(var s in Model)
+{
+    <h3>@s.SId : @s.Name</h3>
+} *@
+
+
+@{
+    int i = 1;
+}
+@foreach (var s in Model)
+{
+    <h3>@i) &nbsp;&nbsp; @s.SId : @s.Name</h3>
+    i = i + 1;
+}
